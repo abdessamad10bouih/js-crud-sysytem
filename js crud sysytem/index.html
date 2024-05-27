@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 p-6">
+    <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
+      <div class="mb-4">
+        <label for="title" class="block text-gray-700 text-sm font-bold mb-2"
+          >Title:</label
+        >
+        <input
+          type="text"
+          id="title"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="price" class="block text-gray-700 text-sm font-bold mb-2"
+          >Price:</label
+        >
+        <input
+          type="text"
+          id="price"
+          onkeyup="getTotal()"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="taxes" class="block text-gray-700 text-sm font-bold mb-2"
+          >Taxes:</label
+        >
+        <input
+          type="text"
+          id="taxes"
+          onkeyup="getTotal()"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="ads" class="block text-gray-700 text-sm font-bold mb-2"
+          >Ads:</label
+        >
+        <input
+          type="text"
+          id="ads"
+          onkeyup="getTotal()"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="discount" class="block text-gray-700 text-sm font-bold mb-2"
+          >Discount:</label
+        >
+        <input
+          type="text"
+          id="discount"
+          onkeyup="getTotal()"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="count" class="block text-gray-700 text-sm font-bold mb-2"
+          >Count:</label
+        >
+        <input
+          type="number"
+          id="count"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        />
+      </div>
+      <div class="mb-4">
+        <label
+          for="categorie"
+          class="block text-gray-700 text-sm font-bold mb-2"
+          >Categorie:</label
+        >
+        <input
+          type="text"
+          id="categorie"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        />
+      </div>
+      <div class="text-gray-700 text-sm font-bold mb-2">
+        <small id="total">Total is: </small>
+      </div>
+      <div class="mb-4">
+        <button
+          id="create"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        >
+          Create
+        </button>
+      </div>
+      <div class="btnDeleteAll mb-4"></div>
+    </div>
+    <div class="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-md mt-6">
+      <table class="min-w-full bg-white">
+        <thead>
+          <tr>
+            <th class="py-2">ID</th>
+            <th class="py-2">Title</th>
+            <th class="py-2">Price</th>
+            <th class="py-2">Taxes</th>
+            <th class="py-2">Ads</th>
+            <th class="py-2">Discount</th>
+            <th class="py-2">Count</th>
+            <th class="py-2">Categorie</th>
+            <th class="py-2">Total</th>
+            <th class="py-2">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="productTableBody"></tbody>
+      </table>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
